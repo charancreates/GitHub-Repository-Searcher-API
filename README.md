@@ -1,16 +1,8 @@
 # GitHub Repository Searcher API
 
-A production-ready **Spring Boot** RESTful backend that searches GitHub repositories via the GitHub REST API, persists them in **PostgreSQL** with automatic upsert (zero duplicates), and exposes dynamic filtering endpoints—documented with **Swagger/OpenAPI** and containerized with **Docker**.
+A **Spring Boot** RESTful backend that searches GitHub repositories via the GitHub REST API, persists them in **PostgreSQL** with automatic upsert (zero duplicates), and exposes dynamic filtering endpoints documented with **Swagger/OpenAPI**.
 
 > **In simple terms:** Ask this API for any GitHub topic (e.g., _"Spring Boot in Java"_), and it fetches the top matching repositories from GitHub, saves/updates them in PostgreSQL, and lets you query and filter your saved collection anytime.
-
----
-
-## Live Deployment & Documentation
-
-- **Live Base URL:** `https://<your-render-app-name>.onrender.com`
-- **Interactive Swagger UI:** `https://<your-render-app-name>.onrender.com/swagger-ui.html`
-- **OpenAPI JSON Spec:** `https://<your-render-app-name>.onrender.com/v3/api-docs`
 
 ---
 
@@ -24,7 +16,6 @@ A production-ready **Spring Boot** RESTful backend that searches GitHub reposito
 | **Validation & Error Handling** | Jakarta Bean Validation (`@Valid`), `@RestControllerAdvice`                  |
 | **API Documentation**           | Springdoc OpenAPI 3 (Swagger UI)                                             |
 | **Testing**                     | JUnit 5, Mockito, Spring `MockMvc` (`@WebMvcTest`)                           |
-| **Containerization & Hosting**  | Multi-stage Docker (`maven:3.9.6` + `eclipse-temurin:17-jre-alpine`), Render |
 
 ---
 
@@ -179,7 +170,6 @@ All exceptions are intercepted by `GlobalExceptionHandler` (`@RestControllerAdvi
 
 ```text
 github-repo-searcher/
-├── Dockerfile                          # Multi-stage Docker build for Render
 ├── pom.xml                             # Maven dependencies & build plugins
 ├── .env.example                        # Safe environment variable template
 ├── src/
@@ -254,17 +244,3 @@ mvn spring-boot:run
 ```
 
 Open Swagger UI at: `http://localhost:8080/swagger-ui.html`
-
----
-
-## Deploying to Render (Docker)
-
-1. Push the repository to GitHub (ensure `.env` is gitignored).
-2. Create a new **Web Service** on [Render](https://render.com) connected to your repo.
-3. Select **Docker** as the runtime (Render auto-detects the `Dockerfile`).
-4. Add the following **Environment Variables** in Render:
-   - `DB_URL` (`jdbc:postgresql://<NEON_HOST>/<DB_NAME>?sslmode=require`)
-   - `DB_USERNAME`
-   - `DB_PASSWORD`
-   - `GITHUB_TOKEN` _(optional)_
-5. Deploy. Render injects `PORT` automatically (`server.port=${PORT:8080}`).
