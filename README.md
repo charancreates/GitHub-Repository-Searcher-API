@@ -6,16 +6,23 @@ A **Spring Boot** RESTful backend that searches GitHub repositories via the GitH
 
 ---
 
+## Live API
+
+- **Swagger UI:** [https://github-repo-searcher-3eao.onrender.com/swagger-ui.html](https://github-repo-searcher-3eao.onrender.com/swagger-ui.html)
+- **OpenAPI specification:** [https://github-repo-searcher-3eao.onrender.com/v3/api-docs](https://github-repo-searcher-3eao.onrender.com/v3/api-docs)
+
+---
+
 ## Tech Stack
 
-| Category                        | Technology                                                                   |
-| :------------------------------ | :--------------------------------------------------------------------------- |
-| **Language & Framework**        | Java 17, Spring Boot 3.3.5                                                   |
-| **HTTP Client**                 | Spring `RestClient` (configured with GitHub headers & optional Bearer auth)  |
-| **Database & ORM**              | PostgreSQL (Neon), Spring Data JPA, Hibernate                                |
-| **Validation & Error Handling** | Jakarta Bean Validation (`@Valid`), `@RestControllerAdvice`                  |
-| **API Documentation**           | Springdoc OpenAPI 3 (Swagger UI)                                             |
-| **Testing**                     | JUnit 5, Mockito, Spring `MockMvc` (`@WebMvcTest`)                           |
+| Category                        | Technology                                                                  |
+| :------------------------------ | :-------------------------------------------------------------------------- |
+| **Language & Framework**        | Java 17, Spring Boot 3.3.5                                                  |
+| **HTTP Client**                 | Spring `RestClient` (configured with GitHub headers & optional Bearer auth) |
+| **Database & ORM**              | PostgreSQL (Neon), Spring Data JPA, Hibernate                               |
+| **Validation & Error Handling** | Jakarta Bean Validation (`@Valid`), `@RestControllerAdvice`                 |
+| **API Documentation**           | Springdoc OpenAPI 3 (Swagger UI)                                            |
+| **Testing**                     | JUnit 5, Mockito, Spring `MockMvc` (`@WebMvcTest`)                          |
 
 ---
 
