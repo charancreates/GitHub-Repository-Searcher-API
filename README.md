@@ -6,14 +6,6 @@ A **Spring Boot** RESTful backend that searches GitHub repositories via the GitH
 
 ---
 
-## Live API
-
-- **Base URL:** `https://github-repo-searcher-3eao.onrender.com`
-- **Swagger UI:** [https://github-repo-searcher-3eao.onrender.com/swagger-ui.html](https://github-repo-searcher-3eao.onrender.com/swagger-ui.html)
-- **OpenAPI specification:** `https://github-repo-searcher-3eao.onrender.com/v3/api-docs`
-
----
-
 ## Tech Stack
 
 | Category                        | Technology                                                                   |
